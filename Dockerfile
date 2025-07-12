@@ -1,9 +1,9 @@
-# Usar OpenJDK 17 como imagen base
-FROM openjdk:17-jdk-slim
+# Usar imagen base con Maven pre-instalado
+FROM maven:3.8.6-openjdk-17-slim
 
-# Instalar Maven
+# Instalar curl para troubleshooting (opcional)
 RUN apt-get update && \
-    apt-get install -y maven && \
+    apt-get install -y curl && \
     rm -rf /var/lib/apt/lists/*
 
 # Establecer directorio de trabajo
