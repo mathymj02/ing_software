@@ -1,0 +1,8 @@
+[phases.build]
+cmd = "mvn clean package -DskipTests"
+
+[phases.start]
+cmd = "java -jar target/*.jar"
+
+[variables]
+MAVEN_OPTS = "-Xmx1024m"
